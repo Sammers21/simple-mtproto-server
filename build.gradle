@@ -1,0 +1,21 @@
+apply plugin: 'scala'
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies{
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.slf4j:slf4j-simple:1.7.5'
+    compile 'org.scala-lang:scala-library:2.12.5'
+    compile group: 'com.typesafe.akka', name: 'akka-stream_2.12', version: '2.5.18'
+    compile group: 'org.scodec', name: 'scodec-core_2.12', version: '1.10.3'
+    testCompile "junit:junit:4.11"
+}
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'Main'
+    classpath sourceSets.main.runtimeClasspath
+    classpath configurations.runtime
+}
