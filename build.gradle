@@ -11,6 +11,7 @@ dependencies{
     compile 'org.scala-lang:scala-library:2.12.5'
     compile group: 'com.typesafe.akka', name: 'akka-stream_2.12', version: '2.5.18'
     compile group: 'org.scodec', name: 'scodec-core_2.12', version: '1.10.3'
+    compile group: 'org.scodec', name: 'scodec-akka_2.12', version: '0.3.0'
     testCompile "junit:junit:4.11"
 }
 
